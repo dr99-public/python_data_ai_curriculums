@@ -7,3 +7,329 @@
 These lessons will use a combination of tasks and examples developed for purpoase, coupled with publicly available videos, tutorials, and data sets. Limits of this curriculum:
 - It can't possibly make someone an expert in data or analytics in a week, a month, or a year, as many courses promise to do.
 - Not intended to teach database maintenance/administration, or formal Python programming.
+
+Other data analysis (not coding/tech) skills:
+- regression
+Basic quantitative analysis skills
+1. Descriptive statistics
+These are the basics for summarizing data.
+Key concepts:
+count
+sum
+mean
+median
+mode
+minimum / maximum
+range
+percentiles
+quartiles
+interquartile range
+variance
+standard deviation
+The practical skill is knowing which summary is appropriate.
+Example: income, order value, claim cost, and account balances are often skewed, so the median and percentiles may be more informative than the average
+
+2. Distributions
+Analysts need to understand the shape of data, not just single summary values.
+Key concepts:
+normal distribution
+skewed distribution
+long-tail distribution
+uniform distribution
+bimodal distribution
+outliers
+tails
+concentration
+Practical questions:
+Are most values clustered tightly or spread out?
+Is the average distorted by a few extreme values?
+Are there two different populations mixed together?
+Are the highest-value customers, claims, transactions, or cases driving most of the result?
+
+3. Variability and dispersion
+This is about how much values differ from each other.
+Key concepts:
+variance
+standard deviation
+coefficient of variation
+interquartile range
+z-scores
+volatility
+error bars
+Practical use:
+Two teams may have the same average productivity, but one may be highly consistent while the other swings wildly. The average alone hides that.
+
+4. Probability basics
+Analysts need enough probability to reason about uncertainty.
+Key concepts:
+probability
+conditional probability
+independence
+expected value
+base rates
+odds
+risk
+false positives and false negatives
+Practical use:
+If a fraud model flags a transaction, the relevant question is not just “how accurate is the model?” It is also:
+Given the low base rate of fraud, how likely is this flagged transaction actually fraudulent?
+
+5. Sampling and sample size
+A lot of bad analysis comes from overreading small samples.
+Key concepts:
+sample
+population
+sample size
+sampling bias
+random sampling
+representativeness
+margin of error
+law of large numbers
+Practical use:
+A 30% increase among 12 customers may not mean much. A 3% increase among 2 million customers may be highly meaningful.
+
+6. Confidence intervals
+A point estimate is rarely enough.
+Key concepts:
+point estimate
+confidence interval
+margin of error
+uncertainty range
+confidence level
+Practical use:
+Instead of saying:
+Conversion increased from 4.1% to 4.3%.
+A better analyst asks:
+Is that increase meaningfully outside the expected range of random variation?
+
+7. Hypothesis testing
+This is the formal version of “is this difference real or just noise?”
+Key concepts:
+null hypothesis
+alternative hypothesis
+p-value
+statistical significance
+practical significance
+Type I error
+Type II error
+statistical power
+Practical use:
+A result can be statistically significant but operationally trivial. Or it can be practically important but not yet statistically proven because the sample is too small.
+
+8. Correlation
+Correlation is basic but often misused.
+Key concepts:
+positive correlation
+negative correlation
+correlation coefficient
+scatterplots
+spurious correlation
+correlation vs causation
+Practical use:
+If customer tenure and spending are correlated, that does not prove tenure causes spending. It may be that better customers both stay longer and spend more.
+
+9. Regression
+Regression is one of the most useful general-purpose analytic concepts.
+Key concepts:
+simple linear regression
+multiple regression
+dependent variable
+independent variable
+coefficient
+intercept
+residual
+R-squared
+adjusted R-squared
+multicollinearity
+omitted variable bias
+logistic regression
+Practical use:
+Regression helps estimate relationships while controlling for other factors.
+Example:
+Are higher discounts associated with higher sales after controlling for region, product, season, and customer size?
+Regression does not automatically prove causality, but it is a core tool for structured analysis.
+
+10. Residuals and model fit
+Knowing how to evaluate a model matters as much as running one.
+Key concepts:
+residuals
+fitted values
+prediction error
+overfitting
+underfitting
+model assumptions
+goodness of fit
+R-squared
+mean absolute error
+root mean squared error
+Practical use:
+A model can produce a clean-looking equation but still fail badly for certain segments, outliers, or ranges of values.
+
+11. Time series analysis
+Many business questions involve trends over time.
+Key concepts:
+trend
+seasonality
+cyclicality
+moving average
+rolling average
+year-over-year comparison
+month-over-month comparison
+lag
+leading indicator
+trailing indicator
+autocorrelation
+forecast error
+Practical use:
+Comparing December to November may be useless in a seasonal business. Comparing December this year to December last year may be better.
+
+12. Indexes and normalization
+Analysts often need to put unlike things onto a comparable basis.
+Key concepts:
+index values
+baseline period
+normalization
+standardization
+per-capita measures
+rate per unit
+percent change
+basis points
+Practical use:
+Instead of comparing raw claim counts across states, compare claims per 1,000 policies. Instead of comparing raw sales across stores, compare sales per square foot or sales per customer.
+
+13. Ratios, rates, and percentages
+This sounds simple, but it causes many mistakes.
+Key concepts:
+rate
+ratio
+percentage
+percentage-point change
+percent change
+basis points
+denominator effects
+Practical use:
+An increase from 2% to 4% is a 2 percentage-point increase and a 100% relative increase. Those are both true, but they communicate very different things.
+
+14. Cohort analysis
+Cohort thinking is essential for retention, customer behavior, performance tracking, and lifecycle analysis.
+Key concepts:
+cohort
+retention curve
+vintage
+aging
+survival
+lifecycle
+tenure
+churn rate
+Practical use:
+Overall customer retention may look stable while newer customer cohorts are deteriorating. Aggregates can hide lifecycle effects.
+
+15. Segmentation and stratification
+This is partly conceptual and partly statistical.
+Key concepts:
+segment
+stratum
+subgroup
+mix shift
+Simpson’s paradox
+weighted average
+compositional effects
+Practical use:
+A company’s overall margin may decline even if every product’s margin improved, simply because the sales mix shifted toward lower-margin products.
+
+16. Causality basics
+Even before advanced causal inference, analysts need the fundamentals.
+Key concepts:
+causation
+confounding
+reverse causality
+selection bias
+natural experiment
+control group
+treatment group
+before-and-after comparison
+difference-in-differences
+randomized controlled trial
+A/B test
+Practical use:
+If customers who receive outreach are more likely to renew, that may be because outreach worked. Or it may be because sales teams selectively contacted customers who were already likely to renew.
+
+17. Experimental design
+This is the formal version of testing changes.
+Key concepts:
+randomization
+control group
+treatment group
+sample size
+statistical power
+treatment effect
+contamination
+test duration
+success metric
+Practical use:
+A bad A/B test can produce worse evidence than no test at all if the groups are not comparable or the measurement window is wrong.
+
+18. Forecasting concepts
+Not every analyst needs to build sophisticated forecasts, but most should understand the basics.
+Key concepts:
+forecast
+baseline forecast
+trend forecast
+seasonality
+forecast error
+mean absolute percentage error
+scenario analysis
+sensitivity analysis
+confidence bands
+Practical use:
+A forecast should usually be compared against a simple baseline. A complex model that cannot beat “same as last month” or “same month last year plus trend” is not adding value.
+
+19. Sensitivity analysis
+This is about understanding how conclusions change when assumptions change.
+Key concepts:
+assumption
+parameter
+scenario
+best case
+base case
+worst case
+elasticity
+break-even point
+Practical use:
+If a business case only works when churn improves by 30%, acquisition cost falls by 20%, and prices rise by 10%, the conclusion is fragile.
+
+20. Measurement error and bias
+Analysts need to understand that data is not reality. It is a measurement of reality.
+Key concepts:
+measurement error
+bias
+missing data
+survivorship bias
+selection bias
+recall bias
+reporting bias
+classification error
+proxy variable
+Practical use:
+If customer satisfaction surveys only capture people angry enough or happy enough to respond, the results may not represent the full customer base.
+
+
+A compact curriculum-style list
+For basic analysis training, I would probably organize the quantitative concepts into this sequence:
+Measures and distributions
+Mean, median, percentiles, standard deviation, skew, outliers.
+Rates and comparisons
+Percent change, percentage points, ratios, indexes, denominators, baselines.
+Variation and uncertainty
+Sampling, confidence intervals, margin of error, statistical significance.
+Relationships between variables
+Correlation, scatterplots, simple regression, multiple regression, residuals.
+Time-based analysis
+Trends, seasonality, rolling averages, year-over-year comparisons, forecasting basics.
+Segmentation and mix effects
+Cohorts, stratification, weighted averages, Simpson’s paradox, composition effects.
+Causal reasoning
+Confounding, selection bias, control groups, A/B tests, difference-in-differences.
+Decision analysis
+Expected value, sensitivity analysis, scenario analysis, practical significance.
+That is probably the right “actual analysis” layer between pure business reasoning and technical implementation.

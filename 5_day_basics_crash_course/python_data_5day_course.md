@@ -1,8 +1,8 @@
-# 5-Day Python/Data Crash Course
+# 5-Day Python/Data Basics Course
 ## Session Agendas, Covered Content, and Code Examples
-**Audience:** Analysts, developers, or technical business users who already have Python, VS Code, pip, GitHub, and internal package access configured.
+**Audience:** Analysts, students, developers of other languages/platforms. Must know OS well enough to understand installing software and configuring .ini files. Must have Python, VS Code, pip, GitHub, and internal package access configured.
 
-**Course format:** 5 sessions, 2 hours each.
+**Course format:** 5 sessions, 2 hours each. Each session has take-away homework.
 
 **Primary objective:** Build practical Python coding fluency for work-style data tasks: reading files, validating data, writing outputs, using functions, reading configuration, staging data locally with SQLite, debugging, error trapping, and logging.
 
@@ -14,52 +14,11 @@
 
 ## Session goal
 
-By the end of Session 1, participants should be able to read and write simple Python scripts using variables, basic data types, lists, dictionaries, loops, conditional logic, and simple debugging techniques.
+By the end of Session 1, participants should be able to write simple Python scripts using variables, basic data types, lists, dictionaries, loops, conditional logic, and simple debugging techniques.
 
-The focus is not abstract programming theory. The focus is on becoming comfortable with Python syntax and using Python to reason through row-like business data.
+The focus is on becoming comfortable with Python syntax and using Python to reason through row-like business data. So this will not cover bstract programming theory: the goal isn't to train CS majors.
 
----
-
-## Agenda
-
-| Time | Topic |
-|---:|---|
-| 0:00–0:10 | Course orientation and how the week fits together |
-| 0:10–0:25 | Running a Python script and reading output |
-| 0:25–0:45 | Variables, strings, numbers, booleans |
-| 0:45–1:05 | Lists and dictionaries |
-| 1:05–1:25 | `if / elif / else` logic |
-| 1:25–1:45 | `for` loops over records |
-| 1:45–1:55 | Reading basic error messages |
-| 1:55–2:00 | Wrap-up and takeaways |
-
----
-
-## Concepts covered
-
-### 1. Running a Python script
-
-Participants should understand that a Python script is just a text file ending in `.py`.
-
-Example file:
-
-```python
-# session_1_basics.py
-
-print("Python is running.")
-```
-
-Run from VS Code or terminal:
-
-```bash
-python session_1_basics.py
-```
-
-Expected output:
-
-```text
-Python is running.
-```
+- specific contents are in **5d_s1_agenda.md**
 
 ---
 
@@ -166,6 +125,60 @@ Expected output:
 ```text
 Balance: $1,250.75
 ```
+
+## Optional: using Jupyter Notebook for quick inspection
+
+Jupyter Notebook can be introduced briefly here as an interactive scratchpad for testing small expressions before putting them into a `.py` script.
+
+The recommended framing is:
+
+```text
+Use Jupyter to explore.
+Use .py scripts to operationalize.
+```
+
+For example, a learner can test string behavior one cell at a time:
+
+```python
+customer_id = "C001"
+region = "Northeast"
+status = "ACTIVE"
+```
+
+```python
+message = f"{customer_id} is an {status} customer in the {region} region."
+message
+```
+
+Expected notebook output:
+
+```text
+'C001 is an ACTIVE customer in the Northeast region.'
+```
+
+They can also test formatting rules interactively:
+
+```python
+balance = 1250.75
+formatted_balance = f"${balance:,.2f}"
+formatted_balance
+```
+
+Expected notebook output:
+
+```text
+'$1,250.75'
+```
+
+This is useful for quick inspection, but the final version of repeatable work should still be placed in a normal Python script such as:
+
+```text
+session_1_basics.py
+```
+
+This prevents the course from becoming notebook-centered while still showing learners a practical way to experiment with syntax.
+
+---
 
 ---
 
@@ -1232,10 +1245,10 @@ C003,ACTIVE,West
 `orders.csv`
 
 ```text
-order_id,customer_id,order_amount
-O1001,C001,250.00
-O1002,C001,75.00
-O1003,C003,125.00
+order_id,order_dt,customer_id,order_amount
+O1001,2025-08-04T09:15:00,C001,250.00
+O1002,2025-09-02T10:40:00,C001,75.00
+O1003,2025-10-15T11:05:00,C003,125.00
 ```
 
 SQLite tables:
