@@ -1,0 +1,22 @@
+{
+  "5day session 1 sample data set": {
+    "scope": "python",
+    "prefix": "5ds1 data orders",
+    "body": [
+    "orders = [",
+      "    {\"order_id\": 1001, \"order_dt\": \"2025-08-04T09:15:00\", \"customer\": \"Acme Corp\", \"amount\": 1250.00, \"status\": \"paid\", \"sales_region\": \"East\"},",
+      "    {\"order_id\": 1002, \"order_dt\": \"2025-09-02T10:40:00\", \"customer\": \"Beta LLC\", \"amount\": 950000.00, \"status\": \"paid\", \"sales_region\": \"West\"},",
+      "    {\"order_id\": 1003, \"order_dt\": \"2025-10-15T11:05:00\", \"customer\": \"Cygnus Inc\", \"amount\": 980.00, \"status\": \"paid\", \"sales_region\": \"East\"},",
+      "    {\"order_id\": 1004, \"order_dt\": \"2025-11-20T14:20:00\", \"customer\": \"Delta Co\", \"amount\": 2200.00, \"status\": \"overdue\", \"sales_region\": \"South\"},",
+      "    {\"order_id\": 1005, \"order_dt\": \"2025-12-19T08:55:00\", \"customer\": \"Acme Corp\", \"amount\": 700.00, \"status\": \"paid\", \"sales_region\": \"East\"},",
+      "    {\"order_id\": 1006, \"order_dt\": \"2026-01-23T13:10:00\", \"customer\": \"Acme Corp\", \"amount\": 11200.00, \"status\": \"paid\", \"sales_region\": \"East\"},",
+      "    {\"order_id\": 1007, \"order_dt\": \"2026-02-18T16:25:00\", \"customer\": \"NY Plumbing Inc.\", \"amount\": 300.00, \"status\": \"paid\", \"sales_region\": \"South\"},",
+      "    {\"order_id\": 1008, \"order_dt\": \"2026-03-27T17:45:00\", \"customer\": \"NY Plumbing Inc.\", \"amount\": 225.00, \"status\": \"pending\", \"sales_region\": \"South\"},",
+      "    {\"order_id\": 1009, \"order_dt\": \"2026-05-09T12:30:00\", \"customer\": \"NY Plumbing Inc.\", \"amount\": 9000.00, \"status\": \"paid\", \"sales_region\": \"South\"},",
+      "    {\"order_id\": 1010, \"order_dt\": \"2026-05-10T15:05:00\", \"customer\": \"NY Plumbing Inc.\", \"amount\": 8300.00, \"status\": \"paid\", \"sales_region\": \"South\"},",   
+      "]",
+      "$0"
+    ],
+    "description": "Inserts the standard orders list dataset for 5 Day Python-Data Basics course"
+  }
+}
